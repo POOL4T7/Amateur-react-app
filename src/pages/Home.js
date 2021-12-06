@@ -11,7 +11,7 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-5 pt-5 text-center">
-              <h1 className="pt-5">Amatures aka Models</h1>
+              <h1 className="pt-5">Welcome to the new era of collections</h1>
               <Link to="/models" className="btn btn-outline-success">
                 Explore
               </Link>

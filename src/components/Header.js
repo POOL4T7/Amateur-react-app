@@ -1,12 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () =>{
+     if(window.scrollY >= 80){
+       setColorchange(true);
+     }
+     else{
+       setColorchange(false);
+     }
+  };
+  window.addEventListener('scroll', changeNavbarColor);
+  const style={
+    backgroundColor:"white",
+    boxShadow:"0 1px 3px 0 rgba(0,0,0,.15)"
+  }
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg fixed-top" style={colorChange ? style:{}}   >
       <div className="container">
         <Link className="navbar-brand" to="/">
-          Amature
+        Amateur
         </Link>
         <button
           className="navbar-toggler"

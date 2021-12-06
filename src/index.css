@@ -34,6 +34,10 @@ h2 {
 /**
 * Navbar css start
 */
+.navAfterScroll{
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.15);
+  background-color: white;
+}
 
 .navbar-brand {
   font-size: 2rem;
@@ -51,6 +55,7 @@ h2 {
   color: black;
   font-family: "Rubik", sans-serif;
   text-transform: uppercase;
+  font-weight: 700;
 }
 .nav-link:hover {
   color: black;
@@ -63,7 +68,7 @@ h2 {
   outline: none;
   margin-right: -35px;
   font-family: "Rubik", sans-serif;
-  border: 2px solid rgb(248, 26, 92);
+  border: 2px solid green;
 }
 
 .btn0 {
@@ -71,20 +76,24 @@ h2 {
   width: 40%;
   outline: none;
   border: none;
-  background: rgb(248, 26, 92);
-  color: white;
+  background: green;
   font-weight: 700;
   border-radius: 60px;
+  color:white;
 }
 
 /**
 * Navbar css end
 */
 
+
+/**
+* Landing page css start
+*/
 #home {
   background: url(./images/front.jpg) no-repeat;
   background-size: cover;
-  height: 92vh;
+  height: 100vh;
   background-position: 50% 50%;
   width: 100%;
 }
@@ -95,13 +104,7 @@ h2 {
   margin-top: 10rem;
 }
 
-.btn1 {
-  height: 45px;
-  width: 35%;
-  border: none;
-  outline: none;
-  background-color: rgb(248, 26, 92);
-  color: white;
-  font-weight: 700;
-  border-radius: 60px;
-}
+/**
+* Landing page css end
+*/
+
