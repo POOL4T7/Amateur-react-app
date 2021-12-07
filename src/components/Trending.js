@@ -1,7 +1,9 @@
 import React from 'react'
+import TrendingCard from './cards/TrendingCard';
 import Trendig from "../images/trending.jpg"
 
 const Trending = () => {
+    const arr = [1, 2, 3, 4];
     return (
         <section className="trending">
             <div className="container">
@@ -12,38 +14,9 @@ const Trending = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-3 text-center">
-                        <div className="card border-0 bg-light">
-                            <div className="card-body">
-                                <img src={Trendig} alt="trending" className="img-fluid" />
-                            </div>
-                        </div>
-                        <h6>Name</h6>
-                    </div>
-                    <div className="col-md-3 text-center">
-                        <div className="card border-0 bg-light">
-                            <div className="card-body">
-                                <img src={Trendig} alt="trending" className="img-fluid" />
-                            </div>
-                        </div>
-                        <h6>Name</h6>
-                    </div>
-                    <div className="col-md-3 text-center">
-                        <div className="card border-0 bg-light">
-                            <div className="card-body">
-                                <img src={Trendig} alt="trending" className="img-fluid" />
-                            </div>
-                        </div>
-                        <h6>Name</h6>
-                    </div>
-                    <div className="col-md-3 text-center">
-                        <div className="card border-0 bg-light">
-                            <div className="card-body">
-                                <img src={Trendig} alt="trending" className="img-fluid" />
-                            </div>
-                        </div>
-                        <h6>Name</h6>
-                    </div>
+                    {arr.map(item => (
+                        <TrendingCard profile={Trendig} />
+                    ))}
                 </div>
             </div>
         </section>

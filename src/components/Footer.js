@@ -2,9 +2,11 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="text-center">
-      Copyright &copy; Amature 2021 - {new Date().getFullYear()}
-    </div>
+    <section className="footer">
+      <div className=" container text-center py-5">
+        Copyright &copy; Amature 2021 - {new Date().getFullYear()}
+      </div>
+    </section>
   );
 };
 

@@ -1,7 +1,10 @@
 import React from 'react'
-import trending from "../images/trending.jpg"
+import image from "../images/cover.jpg"
+import AboutCard from './cards/AboutCard'
+import Loader from "./Loader"
 
 const About = () => {
+    const arr = [1, 2, 3]
     return (
         <section className="about">
             <div className="container">
@@ -11,23 +14,11 @@ const About = () => {
                         <h6 style={{ color: "red" }}>Blah blah!</h6>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-4 text-center">
-                        <img src={trending} className="img-fluid " alt="about" />
-                        <h5>Babe</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis maiores labore illum tenetur amet officiis.</p>
-                    </div>
-                    <div className="col-md-4 text-center">
-                        <img src={trending} className="img-fluid " alt="about" />
-                        <h5>Babe</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis maiores labore illum tenetur amet officiis.</p>
-                    </div>
-                    <div className="col-md-4 text-center">
-                        <img src={trending} className="img-fluid " alt="about" />
-                        <h5>Babe</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis maiores labore illum tenetur amet officiis.</p>
-                    </div>
-                </div>
+                {arr.length > 0 ? <div className="row">
+                    {arr.map(item => (
+                        <AboutCard profile={image} />
+                    ))}
+                </div> : <Loader />}
             </div>
         </section>
     )
