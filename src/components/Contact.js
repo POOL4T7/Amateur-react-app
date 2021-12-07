@@ -39,9 +39,9 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="row py-3">
-<div className="col-md-12">
+                  <div className="col-md-12">
                     <textarea name="" id="" className="form-control bg-light" cols="30" rows="5"></textarea>
-</div>
+                  </div>
                 </div>
                 <button type="submit" className="btn btn-outline-success">Submit</button>
               </div>

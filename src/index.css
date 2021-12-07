@@ -34,10 +34,6 @@ h2 {
 /**
 * Navbar css start
 */
-.navAfterScroll{
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.15);
-  background-color: white;
-}
 
 .navbar-brand {
   font-size: 2rem;
@@ -52,13 +48,13 @@ h2 {
 .nav-link {
   margin-right: 10px;
   margin-left: 10px;
-  color: black;
+  color: white;
   font-family: "Rubik", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
 .nav-link:hover {
-  color: black;
+  color: white;
 }
 
 .search {

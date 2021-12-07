@@ -1,13 +1,13 @@
 import React from "react";
 
 const model = ({ Background }) => {
-  const url="https://modelinfo.s3.ap-south-1.amazonaws.com/cover/1636045560525_Lana+rhoades.jpg";
+  const url = "https://modelinfo.s3.ap-south-1.amazonaws.com/cover/1636045560525_Lana+rhoades.jpg";
   return (
     <>
       <div
         className="bg-image"
         style={{
-          backgroundImage: "url(" + url + ")",
+          backgroundImage: `url(${url})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',

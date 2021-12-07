@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Trending from "../components/Trending";
 import About from "../components/About";
 import Contact from "../components/Contact"
+import Loader from "../components/Loader";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Loader />
       <Trending />
       <About />
       <Contact />
