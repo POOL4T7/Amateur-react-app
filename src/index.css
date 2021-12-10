@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: all .2s linear;
 }
 
 code {
@@ -42,7 +43,7 @@ h2 {
 }
 
 .navbar-brand:hover {
-  color: black;
+  color: green;
 }
 
 .nav-link {
@@ -104,3 +105,37 @@ h2 {
 * Landing page css end
 */
 
+/**
+* Card page css
+*/
+
+.infocard .card-body img{
+  filter: grayscale();
+}
+.infocard .card-body:hover img{
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+
+
+
+/* about section */
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.social-link:hover, .social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}

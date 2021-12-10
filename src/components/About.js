@@ -1,10 +1,10 @@
 import React from 'react'
-import image from "../images/cover.jpg"
+// import image from "../images/cover.jpg"
 import AboutCard from './cards/AboutCard'
-import Loader from "./Loader"
+// import Loader from "./Loader"
 
 const About = () => {
-    const arr = [1, 2, 3]
+    const arr = [1, 2, 3, 4]
     return (
         <section className="about">
             <div className="container">
@@ -14,11 +14,11 @@ const About = () => {
                         <h6 style={{ color: "red" }}>Blah blah!</h6>
                     </div>
                 </div>
-                {arr.length > 0 ? <div className="row">
-                    {arr.map(item => (
-                        <AboutCard profile={image} />
+                <div class="row text-center">
+                    {arr.map(person => (
+                        <AboutCard />
                     ))}
-                </div> : <Loader />}
+                </div>
             </div>
         </section>
     )

@@ -2,8 +2,8 @@ import React from 'react'
 
 const InfoCard = ({ profile }) => {
     return (
-        <div className="col-md-4 text-center">
-            <div className="card border-0 bg-light">
+        <div className="infocard col-md-4 text-center">
+            <div className="card border-0">
                 <div className="card-body">
                     <img src={profile} alt="trending" className="img-fluid" loading="lazy" />
                 </div>

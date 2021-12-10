@@ -7,7 +7,7 @@ const model = ({ Background }) => {
   const arr = [1, 2, 3];
   return (
     <>
-      <section className="">
+      <section className="model">
         <div
           className="bg-image"
           style={{
@@ -25,8 +25,8 @@ const model = ({ Background }) => {
             </div>
           </div>
         </div>
-        <div className="container">
-          <div className="row">
+        <div className="container box-container">
+          <div className="row box">
             {arr.map(item => (
               <InfoCard profile={image} />
             ))}

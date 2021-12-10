@@ -31,12 +31,12 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span > <i class="fa fa-bars" aria-hidden="true"></i> </span>
+          <span > <i class="fa fa-bars" aria-hidden="true" style={{ color: "green" }}></i> </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav m-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to="#">
+              <Link className="nav-link" to="/models">
                 Models
               </Link>
             </li>
