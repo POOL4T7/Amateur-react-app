@@ -1,26 +1,34 @@
-import React from 'react'
-import TrendingCard from './cards/TrendingCard';
-import Trendig from "../images/trending.jpg"
+import React from "react";
+import TrendingCard from "./cards/TrendingCard";
+import category from "../data/category";
+import Loader from "./Loader";
 
 const Trending = () => {
-    const arr = [1, 2, 3, 4];
-    return (
-        <section className="trending">
-            <div className="container">
-                <div className="row py-5">
-                    <div className="col-md-5  m-auto text-center">
-                        <h1>What's Trending</h1>
-                        <h6 style={{ color: "red" }}>Blah blah!</h6>
-                    </div>
-                </div>
-                <div className="row">
-                    {arr.map(item => (
-                        <TrendingCard profile={Trendig} />
-                    ))}
-                </div>
-            </div>
-        </section>
-    )
-}
+  return (
+    <section className="trending">
+      <div className="container">
+        <div className="row py-5">
+          <div className="col-md-5  m-auto text-center">
+            <h1>What's Trending</h1>
+            <h6 style={{ color: "red" }}>Blah blah!</h6>
+          </div>
+        </div>
+        {category.length > 0 ? (
+          <div className="row">
+            {category.map((item) => (
+              <TrendingCard
+                key={item._id}
+                profile={item.image}
+                name={item.name}
+              />
+            ))}
+          </div>
+        ) : (
+          <Loader />
+        )}
+      </div>
+    </section>
+  );
+};
 
-export default Trending
+export default Trending;

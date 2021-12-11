@@ -6,18 +6,21 @@ const Header = () => {
   const changeNavbarColor = () => {
     if (window.scrollY >= 80) {
       setColorchange(true);
-    }
-    else {
+    } else {
       setColorchange(false);
     }
   };
-  window.addEventListener('scroll', changeNavbarColor);
+  window.addEventListener("scroll", changeNavbarColor);
   const style = {
     backgroundColor: "black",
-    boxShadow: "0 1px 3px 0 rgba(0,0,0,.15)"
-  }
+    boxShadow: "0 1px 3px 0 rgba(0,0,0,.15)",
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg fixed-top" style={colorChange ? style : {}}   >
+    <nav
+      className="navbar navbar-expand-lg fixed-top"
+      style={colorChange ? style : {}}
+    >
       <div className="container">
         <Link className="navbar-brand" to="/">
           Amateur
@@ -31,29 +34,30 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span > <i class="fa fa-bars" aria-hidden="true" style={{ color: "green" }}></i> </span>
+          <span>
+            {" "}
+            <i
+              className="fa fa-bars"
+              aria-hidden="true"
+              style={{ color: "green" }}
+            ></i>{" "}
+          </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav m-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to="/models">
-                Models
+              <Link className="nav-link" to="/explore">
+                Explore
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link"
-                to="#"
-              >
+              <Link className="nav-link" to="#">
                 Production
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link"
-                to="/models/2"
-              >
-                contact
+              <Link className="nav-link" to="#">
+                contact us
               </Link>
             </li>
           </ul>

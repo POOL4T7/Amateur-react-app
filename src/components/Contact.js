@@ -15,11 +15,11 @@ const Contact = () => {
             <div className="row">
               <div className="col-md-4">
                 <h6>Location</h6>
-                <p>New York</p>
+                <p>Metropolis</p>
                 <h6>Phone</h6>
-                <p>7894561230</p>
+                <p>9451394513</p>
                 <h6>Email</h6>
-                <p>admin@gmail.com</p>
+                <p>Kryptonian@gmail.com</p>
               </div>
               <div className="col-md-7">
                 <div className="row">

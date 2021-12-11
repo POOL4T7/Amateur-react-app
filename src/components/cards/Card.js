@@ -1,8 +1,8 @@
 import React from "react";
 
-const InfoCard = ({ profile }) => {
+const Card = ({ profile }) => {
   return (
-    <div className="infocard col-md-4 text-center">
+    <div className="col-md-4">
       <div className="card border-0">
         <div className="card-body">
           <img
@@ -13,9 +13,8 @@ const InfoCard = ({ profile }) => {
           />
         </div>
       </div>
-      <h6>Name</h6>
     </div>
   );
 };
 
-export default InfoCard;
+export default Card;

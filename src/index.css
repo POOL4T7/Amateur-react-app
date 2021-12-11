@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
+  overflow-x: hidden;
 }
 
 code {
@@ -49,13 +50,13 @@ h2 {
 .nav-link {
   margin-right: 10px;
   margin-left: 10px;
-  color: white;
+  color: green;
   font-family: "Rubik", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
 .nav-link:hover {
-  color: white;
+  color: green;
 }
 
 .search {
@@ -68,6 +69,10 @@ h2 {
   border: 2px solid green;
 }
 
+.search:focus {
+  border: 2px solid green;
+}
+
 .btn0 {
   height: 40px;
   width: 40%;
@@ -76,13 +81,12 @@ h2 {
   background: green;
   font-weight: 700;
   border-radius: 60px;
-  color:white;
+  color: white;
 }
 
 /**
 * Navbar css end
 */
-
 
 /**
 * Landing page css start
@@ -105,22 +109,16 @@ h2 {
 * Landing page css end
 */
 
-/**
-* Card page css
-*/
-
-.infocard .card-body img{
+.trending .card-body img{
   filter: grayscale();
 }
-.infocard .card-body:hover img{
+.trending .card-body:hover img{
   filter: grayscale(0%);
   transform: scale(1.1);
 }
 
+/* about section in home page */
 
-
-
-/* about section */
 .social-link {
   width: 30px;
   height: 30px;
@@ -134,7 +132,8 @@ h2 {
   font-size: 0.9rem;
 }
 
-.social-link:hover, .social-link:focus {
+.social-link:hover,
+.social-link:focus {
   background: #ddd;
   text-decoration: none;
   color: #555;
