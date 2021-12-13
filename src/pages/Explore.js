@@ -1,30 +1,40 @@
 import React, { useState, useEffect } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Card from "../components/cards/Card";
 import data from "../data/index";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 
-const Explore = ({ location }) => {
-  const category = location.search.split("=")[1];
-  const [state, setstate] = useState({
-    loading: false,
+const Explore = () => {
+  let { search } = useLocation();
+  const category = search.split("=")[1];
+  const [state, setState] = useState({
+    loading: true,
     statedata: [],
   });
+
   useEffect(() => {
     let filterData = [];
-    if (category) {
-      filterData = data.filter((data) => {
-        return data.tag === category;
-      });
-    } else {
-      filterData = data;
-    }
-    setstate({ ...state, loading: false, statedata: filterData });
+    setTimeout(() => {
+      if (category) {
+        filterData = data.filter((data) => {
+          return data.tag === category;
+        });
+      } else {
+        filterData = data;
+      }
+      setState({ ...state, loading: false, statedata: filterData });
+    }, 1000);
+
+    setState({ ...state, statedata: filterData });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category]);
+
   const { loading, statedata } = state;
+  console.log(`state`, state);
   return (
     <>
+      <Outlet />
       <section style={{ marginTop: "100px" }}>
         <h1 className="text-center">
           Top{" "}
