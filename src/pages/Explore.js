@@ -25,13 +25,10 @@ const Explore = () => {
       }
       setState({ ...state, loading: false, statedata: filterData });
     }, 1000);
-
-    setState({ ...state, statedata: filterData });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category]);
 
   const { loading, statedata } = state;
-  console.log(`state`, state);
   return (
     <>
       <Outlet />

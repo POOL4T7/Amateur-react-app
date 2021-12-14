@@ -109,10 +109,10 @@ h2 {
 * Landing page css end
 */
 
-.trending .card-body img{
+.trending .card-body img {
   filter: grayscale();
 }
-.trending .card-body:hover img{
+.trending .card-body:hover img {
   filter: grayscale(0%);
   transform: scale(1.1);
 }
