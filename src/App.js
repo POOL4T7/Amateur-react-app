@@ -3,11 +3,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
-import GATracker from "./GATracker";
 
 function App() {
-  GATracker()
-
   return (
     <Router>
       <Header />

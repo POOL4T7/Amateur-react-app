@@ -1,8 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import GATracker from "../GATracker";
 
 const Header = () => {
   const [colorChange, setColorchange] = useState(false);
+  const [pageUrl, setPageUrl] = useState('/');
+  let location = useLocation();
   const changeNavbarColor = () => {
     if (window.scrollY >= 80) {
       setColorchange(true);
@@ -15,6 +18,17 @@ const Header = () => {
     backgroundColor: "black",
     boxShadow: "0 1px 3px 0 rgba(0,0,0,.15)",
   };
+
+  /**
+   * @description Google Analytics
+   */
+  if (location.pathname + location.search !== pageUrl) {
+    setPageUrl(location.pathname + location.search);
+  }
+  useEffect(() => {
+    GATracker(pageUrl);
+  }, [pageUrl])
+
 
   return (
     <nav
