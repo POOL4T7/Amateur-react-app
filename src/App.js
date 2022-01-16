@@ -1,17 +1,12 @@
-import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
-import reactGa from "react-ga"
+import GATracker from "./GATracker";
 
 function App() {
-  useEffect(() => {
-    reactGa.initialize('G-6KG93CM4C7');
-    // to report page view
-    reactGa.pageview(window.location.pathname + window.location.search);
-  }, []);
+  GATracker()
 
   return (
     <Router>
